@@ -100,20 +100,33 @@ if (currentHour >= 18){
 //I've stored the last user input but not every one that is entered - maybe we can ask this
 
 
-$("#8-item-save").on("click", function () {
-    var userInput8 = $("#8-item").val();
-    var userInput8Print = $("<li>");
+var userInput8Store = $("#8-item-save").on("click", function () {
+    /*var userInput8 = */ $("#8-item").val(); 
+    /*var userInput8Print = $("<li>");
     userInput8Print.text(userInput8);
     userInput8Print.addClass("my-2");
-    $("#8-item-container").append(userInput8Print);
-    localStorage.setItem("8-agenda-item", userInput8);
+    $("#8-item-container").append(userInput8Print); */
 });
 
+function localStorePrint8(){
 
-/* // get the text
-var text = $('#test').text();
+    var Array8 = [ ];
+    Array8.push(userInput8Store);
+    localStorage.setItem("userInput8", JSON.stringify(Array8));
+    
+    var Array8 = JSON.parse(localStorage.getItem("userInput8"));
 
-// set the item in localStorage
-localStorage.setItem('test', text)
+    var userInput8Print = $("<li>");
+    userInput8Print.text(Array8); /* if this doesn't work try just .text(Array8)  */
+    userInput8Print.addClass("my-2");
+    $("#8-item-container").append(userInput8Print);
+}
+
+
+
+/* // use the function .getItems and use JSON.parse, and then when you do get it you can store it in a variable and then loop over all the data, and there in the loop you can add the bullet point
+var someArray = JSON.parse(localStorage.getItem("userInput8"));
+
+
 
 */
