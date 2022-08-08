@@ -111,6 +111,8 @@ var retrievedObject = localStorage.getItem('testObject');
 console.log('retrievedObject: ', JSON.parse(retrievedObject));
 */
 
+//I can now check if there is a stored string at 8-agenda-item and append it if there is - and if not the user can enter the text and append it and have that save after refresh
+
 if(localStorage.getItem("8-agenda-item") != null){
 
     var stored8 = localStorage.getItem("8-agenda-item");
@@ -174,6 +176,19 @@ So I think you are on the right track but you should put the localStorage.getIte
 */
 
 
+if(localStorage.getItem("9-agenda-item") != null){
+
+    var stored9 = localStorage.getItem("9-agenda-item");
+
+    var userInput9Print = $("<li>");
+    userInput9Print.text(stored9); 
+    userInput9Print.addClass("my-2 text-dark");
+    $("#9-item-container").append(userInput9Print);
+    $("#9-item").hide();
+    $("#9-item-save").hide();
+
+} else {
+
 $("#9-item-save").on("click", function () {
     var userInput9 = $("#9-item").val(); 
 
@@ -188,7 +203,21 @@ $("#9-item-save").on("click", function () {
     $("#9-item-container").append(userInput9Print);
     $("#9-item").hide();
     $("#9-item-save").hide();
-});
+})};
+
+
+if(localStorage.getItem("10-agenda-item") != null){
+
+    var stored10 = localStorage.getItem("10-agenda-item");
+
+    var userInput10Print = $("<li>");
+    userInput10Print.text(stored10); 
+    userInput10Print.addClass("my-2 text-dark");
+    $("#10-item-container").append(userInput10Print);
+    $("#10-item").hide();
+    $("#10-item-save").hide();
+
+} else {
 
 
 $("#10-item-save").on("click", function () {
@@ -204,7 +233,23 @@ $("#10-item-save").on("click", function () {
     $("#10-item-container").append(userInput10Print);
     $("#10-item").hide();
     $("#10-item-save").hide();
-});
+})};
+
+
+
+
+if(localStorage.getItem("11-agenda-item") != null){
+
+    var stored11 = localStorage.getItem("11-agenda-item");
+
+    var userInput11Print = $("<li>");
+    userInput11Print.text(stored11); 
+    userInput11Print.addClass("my-2 text-dark");
+    $("#11-item-container").append(userInput11Print);
+    $("#11-item").hide();
+    $("#11-item-save").hide();
+
+} else {
 
 $("#11-item-save").on("click", function () {
     var userInput11 = $("#11-item").val(); 
@@ -219,7 +264,22 @@ $("#11-item-save").on("click", function () {
     $("#11-item-container").append(userInput11Print);
     $("#11-item").hide();
     $("#11-item-save").hide();
-});
+})};
+
+
+
+if(localStorage.getItem("12-agenda-item") != null){
+
+    var stored12 = localStorage.getItem("12-agenda-item");
+
+    var userInput12Print = $("<li>");
+    userInput12Print.text(stored12); 
+    userInput12Print.addClass("my-2 text-dark");
+    $("#12-item-container").append(userInput12Print);
+    $("#12-item").hide();
+    $("#12-item-save").hide();
+
+} else {
 
 $("#12-item-save").on("click", function () {
     var userInput12 = $("#12-item").val(); 
@@ -234,7 +294,21 @@ $("#12-item-save").on("click", function () {
     $("#12-item-container").append(userInput12Print);
     $("#12-item").hide();
     $("#12-item-save").hide();
-});
+})};
+
+
+if(localStorage.getItem("13-agenda-item") != null){
+
+    var stored13 = localStorage.getItem("13-agenda-item");
+
+    var userInput13Print = $("<li>");
+    userInput13Print.text(stored13); 
+    userInput13Print.addClass("my-2 text-dark");
+    $("#13-item-container").append(userInput13Print);
+    $("#13-item").hide();
+    $("#13-item-save").hide();
+
+} else {
 
 $("#13-item-save").on("click", function () {
     var userInput13 = $("#13-item").val(); 
@@ -249,7 +323,23 @@ $("#13-item-save").on("click", function () {
     $("#13-item-container").append(userInput13Print);
     $("#13-item").hide();
     $("#13-item-save").hide();
-});
+})};
+
+
+
+
+if(localStorage.getItem("14-agenda-item") != null){
+
+    var stored14 = localStorage.getItem("14-agenda-item");
+
+    var userInput14Print = $("<li>");
+    userInput14Print.text(stored14); 
+    userInput14Print.addClass("my-2 text-dark");
+    $("#14-item-container").append(userInput14Print);
+    $("#14-item").hide();
+    $("#14-item-save").hide();
+
+} else {
 
 $("#14-item-save").on("click", function () {
     var userInput14 = $("#14-item").val(); 
@@ -264,7 +354,21 @@ $("#14-item-save").on("click", function () {
     $("#14-item-container").append(userInput14Print);
     $("#14-item").hide();
     $("#14-item-save").hide();
-});
+})};
+
+
+if(localStorage.getItem("15-agenda-item") != null){
+
+    var stored15 = localStorage.getItem("15-agenda-item");
+
+    var userInput15Print = $("<li>");
+    userInput15Print.text(stored15); 
+    userInput15Print.addClass("my-2 text-dark");
+    $("#15-item-container").append(userInput15Print);
+    $("#15-item").hide();
+    $("#15-item-save").hide();
+
+} else {
 
 $("#15-item-save").on("click", function () {
     var userInput15 = $("#15-item").val(); 
@@ -279,7 +383,22 @@ $("#15-item-save").on("click", function () {
     $("#15-item-container").append(userInput15Print);
     $("#15-item").hide();
     $("#15-item-save").hide();
-});
+})};
+
+
+
+if(localStorage.getItem("16-agenda-item") != null){
+
+    var stored16 = localStorage.getItem("16-agenda-item");
+
+    var userInput16Print = $("<li>");
+    userInput16Print.text(stored16); 
+    userInput16Print.addClass("my-2 text-dark");
+    $("#16-item-container").append(userInput16Print);
+    $("#16-item").hide();
+    $("#16-item-save").hide();
+
+} else {
 
 $("#16-item-save").on("click", function () {
     var userInput16 = $("#16-item").val(); 
@@ -294,7 +413,21 @@ $("#16-item-save").on("click", function () {
     $("#16-item-container").append(userInput16Print);
     $("#16-item").hide();
     $("#16-item-save").hide();
-});
+})};
+
+
+if(localStorage.getItem("17-agenda-item") != null){
+
+    var stored17 = localStorage.getItem("17-agenda-item");
+
+    var userInput17Print = $("<li>");
+    userInput17Print.text(stored17); 
+    userInput17Print.addClass("my-2 text-dark");
+    $("#17-item-container").append(userInput17Print);
+    $("#17-item").hide();
+    $("#17-item-save").hide();
+
+} else {
 
 $("#17-item-save").on("click", function () {
     var userInput17 = $("#17-item").val(); 
@@ -309,7 +442,7 @@ $("#17-item-save").on("click", function () {
     $("#17-item-container").append(userInput17Print);
     $("#17-item").hide();
     $("#17-item-save").hide();
-});
+})};
 
 
 
