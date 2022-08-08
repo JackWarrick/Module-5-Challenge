@@ -111,22 +111,40 @@ var retrievedObject = localStorage.getItem('testObject');
 console.log('retrievedObject: ', JSON.parse(retrievedObject));
 */
 
- $("#8-item-save").on("click", function () {
+if(localStorage.getItem("8-agenda-item") != null){
+
+    var stored8 = localStorage.getItem("8-agenda-item");
+
+    var userInput8Print = $("<li>");
+    userInput8Print.text(stored8); 
+    userInput8Print.addClass("my-2 text-dark");
+    $("#8-item-container").append(userInput8Print);
+    $("#8-item").hide();
+    $("#8-item-save").hide();
+
+} else {
+
+
+$("#8-item-save").on("click", function () {
     var userInput8 = $("#8-item").val(); 
 
-localStorage.setItem("8-agenda-item", userInput8);
+    localStorage.setItem("8-agenda-item", userInput8);
 
-var stored8 = localStorage.getItem("8-agenda-item");
+    var stored8 = localStorage.getItem("8-agenda-item");
+
+    var userInput8Print = $("<li>");
+    userInput8Print.text(stored8); 
+    userInput8Print.addClass("my-2 text-dark");
+    $("#8-item-container").append(userInput8Print);
+    $("#8-item").hide();
+    $("#8-item-save").hide();
 
 
-        var userInput8Print = $("<li>");
-        userInput8Print.text(stored8); 
-        userInput8Print.addClass("my-2 text-dark");
-        $("#8-item-container").append(userInput8Print);
-        $("#8-item").hide();
-        $("#8-item-save").hide();
 
-});
+})
+};
+
+
 
 /* This didn't work but it is close I think
 if (stored8 != null){
@@ -136,6 +154,22 @@ if (stored8 != null){
 } else {
     return - idk i want this just to be the default when you would open the page
 }
+
+So I think you are on the right track but you should put the localStorage.getItem in a separate function that only calls to localstorage.getItem.  Having the set and get in an event listener is having them work only when the button is clicked so when the page refreshes it can't find the function to call getItem.
+
+ $('#09 .text').val(localStorage.getItem('09'));
+
+ something along these lines in a separate call should be all you need.  With the first variable being the container that is holding the text container and the second would be where the text is written.
+
+
+     var stored8 = localStorage.getItem("8-agenda-item");
+
+    var userInput8Print = $("<li>");
+    userInput8Print.text(stored8); 
+    userInput8Print.addClass("my-2 text-dark");
+    $("#8-item-container").append(userInput8Print);
+    $("#8-item").hide();
+    $("#8-item-save").hide();
 
 */
 
